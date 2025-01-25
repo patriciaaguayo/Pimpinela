@@ -1,3 +1,8 @@
+/**
+ * Clase Servidor que implementa un servidor TCP utilizando sockets.
+ * Permite la comunicación con un cliente para intercambiar mensajes
+ * y responder de acuerdo con los mensajes recibidos.
+ */
 package org.example;
 
 import java.io.DataInputStream;
@@ -6,8 +11,19 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+/**
+ * @author Patricia Aguayo Escudero
+ */
+
 public class Servidor {
 
+    /**
+     * Punto de entrada principal para el servidor.
+     * Este método inicializa un servidor TCP en el puerto especificado,
+     * acepta conexiones entrantes y responde a los mensajes enviados por los clientes.
+     *
+     * @param args Argumentos de línea de comandos (no utilizados).
+     */
     public static void main(String[] args) {
 
         ServerSocket servidor = null;
@@ -22,6 +38,7 @@ public class Servidor {
 
             while (true) {
 
+                // Espera una conexión de cliente.
                 conexion = servidor.accept();
                 System.out.println("\n CLIENTE CONECTADO");
 
@@ -39,6 +56,7 @@ public class Servidor {
                             break;
                         }
 
+                        // Procesa el mensaje recibido.
                         switch (mensaje) {
                             case "¿Quién es?":
                                 System.out.println("\n El cliente dice: " + mensaje);

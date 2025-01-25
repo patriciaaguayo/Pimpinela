@@ -1,3 +1,7 @@
+/**
+ * Clase Cliente que implementa un cliente TCP utilizando sockets.
+ * Permite enviar mensajes al servidor y recibir respuestas de este.
+ */
 package org.example;
 
 import java.io.DataInputStream;
@@ -6,8 +10,19 @@ import java.io.IOException;
 import java.net.Socket;
 import java.util.Scanner;
 
+/**
+ * @author Patricia Aguayo Escudero
+ */
+
 public class Cliente {
 
+    /**
+     * Punto de entrada principal para el cliente.
+     * Este método crea una conexión TCP con un servidor especificado,
+     * envía mensajes y muestra las respuestas del servidor.
+     *
+     * @param args Argumentos de línea de comandos (no utilizados).
+     */
     public static void main(String[] args) {
 
         String HOST = "127.0.0.1";
@@ -17,6 +32,7 @@ public class Cliente {
 
         try {
 
+            // Establece una conexión con el servidor.
             Socket conexion = new Socket(HOST, PUERTO);
 
             leer = new DataInputStream(conexion.getInputStream());
@@ -28,7 +44,7 @@ public class Cliente {
             String mensajeS;
 
             do {
-                System.out.print("\n Ingrese un mensaje (escriba 'SALIR' para cerrar): ");
+                System.out.print("\n Introduce un mensaje (escribe 'SALIR' para cerrar): ");
                 mensajeC = scanner.nextLine();
                 escribir.writeUTF(mensajeC);
 
@@ -56,6 +72,7 @@ public class Cliente {
         }
     }
 }
+
 
 
 /*
