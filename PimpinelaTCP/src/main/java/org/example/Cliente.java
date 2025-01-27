@@ -40,6 +40,42 @@ public class Cliente {
 
             Scanner scanner = new Scanner(System.in);
 
+            /*
+
+            //Manera de hacerlo sin tener el usuario que escribir los mensajes
+
+            // MENSAJE 1
+
+            escribir.writeUTF("¿Quién es?");
+            String mensaje = leer.readUTF();
+            System.out.println("\n El servidor dice: " + mensaje);
+
+            // MENSAJE 2
+
+            escribir.writeUTF("¿Qué vienes a buscar?");
+            String mensaje2 = leer.readUTF();
+            System.out.println("\n El servidor dice: " + mensaje2);
+
+            // MENSAJE 3
+
+            escribir.writeUTF("Ya es tarde");
+            String mensaje3 = leer.readUTF();
+            System.out.println("\n El servidor dice: " + mensaje3);
+
+            // MENSAJE 4
+
+            escribir.writeUTF("Porque ahora soy yo la que quiere estar sin ti");
+            String mensaje4 = leer.readUTF();
+            System.out.println("\n El servidor dice: " + mensaje4);
+
+            // MENSAJE 5
+
+            escribir.writeUTF("Salir");
+
+         */
+
+            //Manera de hacerlo con el usuario
+
             String mensajeC;
             String mensajeS;
 
@@ -75,31 +111,3 @@ public class Cliente {
 
 
 
-/*
-
-Manera de hacerlo sin tener el usuario que escribir los mensajes
-
-            // MENSAJE 1
-
-            escribir.writeUTF("¿Quién es?");
-            String mensaje = leer.readUTF();
-            System.out.println("\n El servidor dice: " + mensaje);
-
-            // MENSAJE 2
-
-            escribir.writeUTF("¿Qué vienes a buscar?");
-            String mensaje2 = leer.readUTF();
-            System.out.println("\n El servidor dice: " + mensaje2);
-
-            // MENSAJE 3
-
-            escribir.writeUTF("Ya es tarde");
-            String mensaje3 = leer.readUTF();
-            System.out.println("\n El servidor dice: " + mensaje3);
-
-            // MENSAJE 4
-
-            escribir.writeUTF("Porque ahora soy yo la que quiere estar sin ti");
-            String mensaje4 = leer.readUTF();
-            System.out.println("\n El servidor dice: " + mensaje4);
-         */
